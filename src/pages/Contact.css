@@ -1,0 +1,244 @@
+.contact-hero {
+  background-color: var(--color-coffee);
+  color: var(--color-white);
+  padding: 180px 0 100px;
+  text-align: center;
+}
+
+.dark-mode .contact-hero {
+  background-color: #0a0a0a;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.contact-hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+}
+
+.contact-hero p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+.contact-container {
+  max-width: 1200px;
+}
+
+.contact-info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: -60px; /* Overlap hero slightly */
+}
+
+@media (max-width: 992px) {
+  .contact-info-grid {
+    grid-template-columns: 1fr;
+    margin-top: 0;
+  }
+}
+
+.contact-card {
+  background: var(--color-white);
+  padding: 50px 40px;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-soft);
+  text-align: center;
+  transition: var(--transition-smooth);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dark-mode .contact-card {
+  background: var(--color-nav-bg);
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+.contact-card.hover-lift:hover {
+  transform: translateY(-10px);
+}
+
+.contact-icon-wrapper {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: var(--color-beige);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-coffee);
+  margin-bottom: 24px;
+}
+
+.dark-mode .contact-icon-wrapper {
+  background-color: rgba(255,255,255,0.05);
+  color: var(--color-caramel);
+}
+
+.contact-card h3 {
+  font-family: var(--font-serif);
+  font-size: 1.8rem;
+  margin-bottom: 12px;
+  color: var(--color-coffee);
+}
+
+.dark-mode .contact-card h3 {
+  color: var(--color-white);
+}
+
+.contact-desc {
+  font-size: 1rem;
+  opacity: 0.8;
+  margin-bottom: 30px;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.contact-link:hover {
+  color: var(--color-caramel);
+}
+
+.contact-link svg {
+  color: var(--color-caramel);
+}
+
+.contact-locations {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  text-align: left;
+}
+
+.loc-item {
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  padding-bottom: 16px;
+}
+
+.dark-mode .loc-item {
+  border-bottom-color: rgba(255,255,255,0.05);
+}
+
+.loc-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.loc-item strong {
+  display: block;
+  font-size: 1.1rem;
+  margin-bottom: 4px;
+  color: var(--color-coffee);
+}
+
+.dark-mode .loc-item strong {
+  color: var(--color-white);
+}
+
+.loc-item p {
+  font-size: 0.95rem;
+  opacity: 0.8;
+}
+
+.social-links-lg {
+  display: flex;
+  gap: 16px;
+}
+
+.social-links-lg a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--color-beige);
+  color: var(--color-coffee);
+}
+
+.dark-mode .social-links-lg a {
+  background-color: rgba(255,255,255,0.05);
+  color: var(--color-white);
+}
+
+.social-links-lg a:hover {
+  background-color: var(--color-caramel);
+  color: var(--color-white);
+  transform: translateY(-3px);
+}
+
+.map-section {
+  padding-bottom: 0;
+}
+
+.map-wrapper {
+  position: relative;
+  height: 500px;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.map-bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(0.7) sepia(0.3);
+}
+
+.dark-mode .map-bg-image {
+  filter: brightness(0.4) sepia(0.5);
+}
+
+.map-placeholder {
+  background: var(--color-nav-bg);
+  padding: 60px;
+  border-radius: var(--radius-xl);
+  text-align: center;
+  box-shadow: var(--shadow-hover);
+  max-width: 500px;
+  width: 90%;
+}
+
+.map-placeholder h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: var(--color-coffee);
+}
+
+.dark-mode .map-placeholder h2 {
+  color: var(--color-white);
+}
+
+.map-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+@media (max-width: 576px) {
+  .map-buttons {
+    flex-direction: column;
+  }
+}
